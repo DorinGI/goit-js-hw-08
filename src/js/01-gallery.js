@@ -12,8 +12,8 @@ const photoMarkup = createGalleryItem(galleryItems);
 function createGalleryItem(element) {
     return element
         .map(({ preview, original, description }) => {
-            return `<a class="gallery__link" href="${preview}">
-                <img class="gallery__image" src="${original}" alt="${description}" />
+            return `<a class="gallery__link" href="${original}">
+                <img class="gallery__image" src="${original}" data-source="${original}" alt="${description}" />
                 </a>
             `;
         })
